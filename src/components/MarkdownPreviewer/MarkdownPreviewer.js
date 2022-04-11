@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import marked from "marked";
+import { marked } from "marked";
 import { Wrapper, InnerWrapper, Tools, Controls } from "../MarkdownEditor";
 import { WindowTitle } from "../WindowTitle";
 import { ResizeBtn } from "../ResizeBtn";

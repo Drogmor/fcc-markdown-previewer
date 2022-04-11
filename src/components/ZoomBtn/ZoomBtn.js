@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearchPlus, faSearchMinus } from "@fortawesome/free-solid-svg-icons";
+import { HiZoomin, HiZoomOut } from "react-icons/hi";
 import { Button } from "../Button";
 
 export const ZoomBtn = ({ id, bg, onClick, color, size, fontSize }) => {
@@ -28,11 +27,7 @@ export const ZoomBtn = ({ id, bg, onClick, color, size, fontSize }) => {
       onClick={onClick}
       size={size}
     >
-      {clicked ? (
-        <FontAwesomeIcon color={color} icon={faSearchMinus} />
-      ) : (
-        <FontAwesomeIcon color={color} icon={faSearchPlus} />
-      )}
+      {clicked ? <HiZoomOut /> : <HiZoomin />}
     </Button>
   );
 };

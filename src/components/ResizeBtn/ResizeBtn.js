@@ -1,10 +1,4 @@
 import { useEffect, useState } from "react";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-/* import {
-  faWindowMaximize,
-  faWindowMinimize
-} from "@fortawesome/free-solid-svg-icons";
-*/
 import { HiOutlinePlus, HiOulineMinus } from "react-icons/hi";
 import { Button } from "../Button";
 

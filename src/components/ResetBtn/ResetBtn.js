@@ -1,5 +1,3 @@
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faUndo } from "@fortawesome/free-solid-svg-icons";
 import { HiOutline } from "react-icons/hi";
 import { Button } from "../Button";
 
@@ -14,7 +12,6 @@ export const ResetBtn = ({ id, bg, onClick, color, size, fontSize, type }) => {
       size={size}
       type={type}
     >
-      {/*<FontAwesomeIcon color={color} icon={faUndo} />*/}
       <HiOutline />
     </Button>
   );
