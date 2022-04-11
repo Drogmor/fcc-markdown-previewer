@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+/* import {
   faWindowMaximize,
   faWindowMinimize
 } from "@fortawesome/free-solid-svg-icons";
+*/
+import { HiOutlinePlus, HiOulineMinus } from "react-icons/hi";
 import { Button } from "../Button";
 
 export const ResizeBtn = ({ id, bg, onClick, color, size, fontSize }) => {
@@ -31,11 +33,7 @@ export const ResizeBtn = ({ id, bg, onClick, color, size, fontSize }) => {
       onClick={onClick}
       size={size}
     >
-      {clicked ? (
-        <FontAwesomeIcon color={color} icon={faWindowMinimize} />
-      ) : (
-        <FontAwesomeIcon color={color} icon={faWindowMaximize} />
-      )}
+      {clicked ? <HiOulineMinus /> : <HiOutlinePlus />}
     </Button>
   );
 };

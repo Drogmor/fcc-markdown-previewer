@@ -1,5 +1,4 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCode } from "@fortawesome/free-solid-svg-icons";
+import { HiCode } from "react-icons/hi";
 import { Button } from "../Button";
 
 export const SubmitBtn = ({ id, bg, onClick, color, size, fontSize, type }) => {
@@ -13,7 +12,7 @@ export const SubmitBtn = ({ id, bg, onClick, color, size, fontSize, type }) => {
       size={size}
       type={type}
     >
-      <FontAwesomeIcon color={color} icon={faCode} />
+      <HiCode />
     </Button>
   );
 };
