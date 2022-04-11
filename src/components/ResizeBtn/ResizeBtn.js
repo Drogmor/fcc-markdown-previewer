@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { HiOutlinePlus, HiOulineMinus } from "react-icons/hi";
+import { HiOutlinePlusSm } from "react-icons/hi";
+import { HiOutlineMinusSm } from "react-icons/hi";
 import { Button } from "../Button";
 
 export const ResizeBtn = ({ id, bg, onClick, color, size, fontSize }) => {
@@ -9,7 +10,9 @@ export const ResizeBtn = ({ id, bg, onClick, color, size, fontSize }) => {
     const el = document.getElementById(id);
     const mouseClickHandler = (event) => {
       console.log(clicked);
-      setClicked((clicked) => !clicked);
+      setClicked((clicked) => {
+        return !clicked;
+      });
     };
     if (el) {
       el.addEventListener("click", mouseClickHandler);
@@ -17,7 +20,7 @@ export const ResizeBtn = ({ id, bg, onClick, color, size, fontSize }) => {
         el.removeEventListener("click", mouseClickHandler);
       };
     }
-  }, [clicked]);
+  }, [clicked, id]);
   return (
     <Button
       id={id}
@@ -27,7 +30,7 @@ export const ResizeBtn = ({ id, bg, onClick, color, size, fontSize }) => {
       onClick={onClick}
       size={size}
     >
-      {clicked ? <HiOulineMinus /> : <HiOutlinePlus />}
+      {clicked ? <HiOutlineMinusSm /> : <HiOutlinePlusSm />}
     </Button>
   );
 };

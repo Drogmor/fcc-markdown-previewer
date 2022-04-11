@@ -1,4 +1,4 @@
-import { HiOutline } from "react-icons/hi";
+import { HiOutlineBackspace } from "react-icons/hi";
 import { Button } from "../Button";
 
 export const ResetBtn = ({ id, bg, onClick, color, size, fontSize, type }) => {
@@ -12,7 +12,7 @@ export const ResetBtn = ({ id, bg, onClick, color, size, fontSize, type }) => {
       size={size}
       type={type}
     >
-      <HiOutline />
+      <HiOutlineBackspace />
     </Button>
   );
 };

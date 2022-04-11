@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { HiZoomin, HiZoomOut } from "react-icons/hi";
+import { HiZoomIn } from "react-icons/hi";
+import { HiZoomOut } from "react-icons/hi";
 import { Button } from "../Button";
 
 export const ZoomBtn = ({ id, bg, onClick, color, size, fontSize }) => {
@@ -16,7 +17,7 @@ export const ZoomBtn = ({ id, bg, onClick, color, size, fontSize }) => {
         el.removeEventListener("click", mouseClickHandler);
       };
     }
-  }, [clicked]);
+  }, [id, clicked]);
 
   return (
     <Button
@@ -27,7 +28,7 @@ export const ZoomBtn = ({ id, bg, onClick, color, size, fontSize }) => {
       onClick={onClick}
       size={size}
     >
-      {clicked ? <HiZoomOut /> : <HiZoomin />}
+      {clicked ? <HiZoomOut /> : <HiZoomIn />}
     </Button>
   );
 };
